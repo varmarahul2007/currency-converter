@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="converter-card">
+            <h1 class="title">💱 Currency Converter</h1>
+            <p class="subtitle">Real-time exchange rates</p>
+            
+            <div class="converter-box">
+                <div class="input-group">
+                    <label for="amount">Amount</label>
+                    <input type="number" id="amount" value="1" min="0" step="0.01">
+                </div>
+                
+                <div class="currency-section">
+                    <div class="currency-group">
+                        <label for="fromCurrency">From</label>
+                        <select id="fromCurrency">
+                            <option value="USD">USD - US Dollar</option>
+                            <option value="EUR">EUR - Euro</option>
+                            <option value="GBP">GBP - British Pound</option>
+                            <option value="JPY">JPY - Japanese Yen</option>
+                            <option value="AUD">AUD - Australian Dollar</option>
+                            <option value="CAD">CAD - Canadian Dollar</option>
+                            <option value="CHF">CHF - Swiss Franc</option>
+                            <option value="CNY">CNY - Chinese Yuan</option>
+                            <option value="INR">INR - Indian Rupee</option>
+                            <option value="MXN">MXN - Mexican Peso</option>
+                            <option value="BRL">BRL - Brazilian Real</option>
+                            <option value="ZAR">ZAR - South African Rand</option>
+                            <option value="RUB">RUB - Russian Ruble</option>
+                            <option value="KRW">KRW - South Korean Won</option>
+                            <option value="SGD">SGD - Singapore Dollar</option>
+                            <option value="HKD">HKD - Hong Kong Dollar</option>
+                            <option value="NOK">NOK - Norwegian Krone</option>
+                            <option value="SEK">SEK - Swedish Krona</option>
+                            <option value="DKK">DKK - Danish Krone</option>
+                            <option value="NZD">NZD - New Zealand Dollar</option>
+                            <option value="TRY">TRY - Turkish Lira</option>
+                            <option value="PLN">PLN - Polish Zloty</option>
+                            <option value="THB">THB - Thai Baht</option>
+                            <option value="IDR">IDR - Indonesian Rupiah</option>
+                            <option value="MYR">MYR - Malaysian Ringgit</option>
+                            <option value="PHP">PHP - Philippine Peso</option>
+                            <option value="CZK">CZK - Czech Koruna</option>
+                            <option value="ILS">ILS - Israeli Shekel</option>
+                            <option value="CLP">CLP - Chilean Peso</option>
+                            <option value="AED">AED - UAE Dirham</option>
+                        </select>
+                    </div>
+                    
+                    <button class="swap-btn" id="swapBtn" title="Swap currencies">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 16V4M7 4L3 8M7 4L11 8"></path>
+                            <path d="M17 8V20M17 20L21 16M17 20L13 16"></path>
+                        </svg>
+                    </button>
+                    
+                    <div class="currency-group">
+                        <label for="toCurrency">To</label>
+                        <select id="toCurrency">
+                            <option value="USD">USD - US Dollar</option>
+                            <option value="EUR" selected>EUR - Euro</option>
+                            <option value="GBP">GBP - British Pound</option>
+                            <option value="JPY">JPY - Japanese Yen</option>
+                            <option value="AUD">AUD - Australian Dollar</option>
+                            <option value="CAD">CAD - Canadian Dollar</option>
+                            <option value="CHF">CHF - Swiss Franc</option>
+                            <option value="CNY">CNY - Chinese Yuan</option>
+                            <option value="INR">INR - Indian Rupee</option>
+                            <option value="MXN">MXN - Mexican Peso</option>
+                            <option value="BRL">BRL - Brazilian Real</option>
+                            <option value="ZAR">ZAR - South African Rand</option>
+                            <option value="RUB">RUB - Russian Ruble</option>
+                            <option value="KRW">KRW - South Korean Won</option>
+                            <option value="SGD">SGD - Singapore Dollar</option>
+                            <option value="HKD">HKD - Hong Kong Dollar</option>
+                            <option value="NOK">NOK - Norwegian Krone</option>
+                            <option value="SEK">SEK - Swedish Krona</option>
+                            <option value="DKK">DKK - Danish Krone</option>
+                            <option value="NZD">NZD - New Zealand Dollar</option>
+                            <option value="TRY">TRY - Turkish Lira</option>
+                            <option value="PLN">PLN - Polish Zloty</option>
+                            <option value="THB">THB - Thai Baht</option>
+                            <option value="IDR">IDR - Indonesian Rupiah</option>
+                            <option value="MYR">MYR - Malaysian Ringgit</option>
+                            <option value="PHP">PHP - Philippine Peso</option>
+                            <option value="CZK">CZK - Czech Koruna</option>
+                            <option value="ILS">ILS - Israeli Shekel</option>
+                            <option value="CLP">CLP - Chilean Peso</option>
+                            <option value="AED">AED - UAE Dirham</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="result-box">
+                    <div class="result-label">Converted Amount</div>
+                    <div class="result-amount" id="result">0.00</div>
+                    <div class="exchange-rate" id="rate"></div>
+                </div>
+                
+                <div class="info-box" id="infoBox">
+                    <span class="loading">Loading exchange rates...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
